@@ -1,0 +1,21 @@
+{
+  "short_name": "CoupleConnect",
+  "name": "Couple Connect: Game & Tools",
+  "icons": [
+    {
+      "src": "https://cdn-icons-png.flaticon.com/512/833/833472.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "https://cdn-icons-png.flaticon.com/512/833/833472.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#F43F5E",
+  "background_color": "#F8FAFC",
+  "orientation": "portrait"
+}

@@ -1,0 +1,8 @@
+{
+  "name": "Couple Connect & Create",
+  "description": "A card game for couples to deepen connections, featuring AI-powered image editing and analysis tools.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone"
+  ]
+}
