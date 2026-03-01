@@ -1,3 +1,0 @@
-:HL["/_next/static/chunks/ac734618a8c4236c.css","style"]
-:HL["https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,600;1,600&display=swap","style"]
-0:{"buildId":"c_uz_oJp_4t0r6D4TkRFH","tree":{"name":"","paramType":null,"paramKey":"","hasRuntimePrefetch":false,"slots":{"children":{"name":"__PAGE__","paramType":null,"paramKey":"__PAGE__","hasRuntimePrefetch":false,"slots":null,"isRootLayout":false}},"isRootLayout":true},"staleTime":300}

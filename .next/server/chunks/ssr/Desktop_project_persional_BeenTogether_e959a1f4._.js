@@ -1,3 +1,0 @@
-module.exports=[24307,a=>{a.n(a.i(83570))},866,a=>{a.n(a.i(45333))},63169,a=>{a.n(a.i(7015))},39704,a=>{a.n(a.i(15213))},49853,a=>{a.n(a.i(15845))},15213,(a,b,c)=>{"use strict";Object.defineProperty(c,"__esModule",{value:!0}),Object.defineProperty(c,"default",{enumerable:!0,get:function(){return f}});let d=a.r(65675),e=a.r(45843);function f(){return(0,d.jsx)(e.HTTPAccessErrorFallback,{status:401,message:"You're not authorized to access this page."})}("function"==typeof c.default||"object"==typeof c.default&&null!==c.default)&&void 0===c.default.__esModule&&(Object.defineProperty(c.default,"__esModule",{value:!0}),Object.assign(c.default,c),b.exports=c.default)}];
-
-//# sourceMappingURL=Desktop_project_persional_BeenTogether_e959a1f4._.js.map
