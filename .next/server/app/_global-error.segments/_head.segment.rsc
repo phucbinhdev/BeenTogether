@@ -1,0 +1,5 @@
+1:"$Sreact.fragment"
+2:I[63831,["/_next/static/chunks/84124606074e0c5f.js","/_next/static/chunks/9c3d6123427f9b5c.js"],"ViewportBoundary"]
+3:I[63831,["/_next/static/chunks/84124606074e0c5f.js","/_next/static/chunks/9c3d6123427f9b5c.js"],"MetadataBoundary"]
+4:"$Sreact.suspense"
+0:{"buildId":"c_uz_oJp_4t0r6D4TkRFH","rsc":["$","$1","h",{"children":[null,["$","$L2",null,{"children":[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]}],["$","div",null,{"hidden":true,"children":["$","$L3",null,{"children":["$","$4",null,{"name":"Next.Metadata","children":[]}]}]}],null]}],"loading":null,"isPartial":false}

@@ -1,5 +1,10 @@
 import { CardQuestion } from "./types";
 
+export const MODEL_NAMES = {
+  ANALYZE_IMAGE: "gemini-3.0-pro",
+  EDIT_IMAGE: "gemini-2.5-flash",
+};
+
 export const QUESTIONS: CardQuestion[] = [
   {
     id: 1,

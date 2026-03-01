@@ -3,6 +3,7 @@ export interface CardQuestion {
   content: string;
   category: "fun" | "deep" | "spicy";
   isCustom?: boolean;
+  is_hidden?: boolean;
 }
 
 export enum PlayerTurn {
