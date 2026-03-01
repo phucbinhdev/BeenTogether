@@ -8,7 +8,7 @@ export const fileToGenerativePart = async (file: File): Promise<string> => {
     reader.onloadend = () => {
       const base64String = reader.result as string;
       // Remove data url prefix (e.g., "data:image/jpeg;base64,")
-      const base64Data = base64String.split(',')[1];
+      const base64Data = base64String.split(",")[1];
       resolve(base64Data);
     };
     reader.onerror = reject;
@@ -18,20 +18,30 @@ export const fileToGenerativePart = async (file: File): Promise<string> => {
 
 // Helper for UI display (keeps the prefix)
 export const fileToDataUrl = async (file: File): Promise<string> => {
-    return new Promise((resolve, reject) => {
-      const reader = new FileReader();
-      reader.onload = (e) => resolve(e.target?.result as string);
-      reader.onerror = reject;
-      reader.readAsDataURL(file);
-    });
+  return new Promise((resolve, reject) => {
+    const reader = new FileReader();
+    reader.onload = (e) => resolve(e.target?.result as string);
+    reader.onerror = reject;
+    reader.readAsDataURL(file);
+  });
 };
 
-const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
+const getAI = () => {
+  const apiKey = process.env.API_KEY;
+  if (!apiKey)
+    throw new Error("GEMINI_API_KEY chưa được cấu hình trong file .env");
+  return new GoogleGenAI({ apiKey });
+};
 
 /**
  * Analyzes an image using Gemini 3 Pro Preview
  */
-export const analyzeImageContent = async (base64Image: string, mimeType: string, prompt: string) => {
+export const analyzeImageContent = async (
+  base64Image: string,
+  mimeType: string,
+  prompt: string,
+) => {
+  const ai = getAI();
   try {
     const response = await ai.models.generateContent({
       model: MODEL_NAMES.ANALYZE_IMAGE,
@@ -40,14 +50,14 @@ export const analyzeImageContent = async (base64Image: string, mimeType: string,
           {
             inlineData: {
               mimeType: mimeType,
-              data: base64Image
-            }
+              data: base64Image,
+            },
           },
           {
-            text: prompt || "Describe this image in detail."
-          }
-        ]
-      }
+            text: prompt || "Describe this image in detail.",
+          },
+        ],
+      },
     });
     return response.text;
   } catch (error) {
@@ -59,7 +69,12 @@ export const analyzeImageContent = async (base64Image: string, mimeType: string,
 /**
  * Edits an image using Gemini 2.5 Flash Image (Nano Banana)
  */
-export const editImageContent = async (base64Image: string, mimeType: string, prompt: string) => {
+export const editImageContent = async (
+  base64Image: string,
+  mimeType: string,
+  prompt: string,
+) => {
+  const ai = getAI();
   try {
     const response = await ai.models.generateContent({
       model: MODEL_NAMES.EDIT_IMAGE,
@@ -68,14 +83,14 @@ export const editImageContent = async (base64Image: string, mimeType: string, pr
           {
             inlineData: {
               mimeType: mimeType,
-              data: base64Image
-            }
+              data: base64Image,
+            },
           },
           {
-            text: prompt
-          }
-        ]
-      }
+            text: prompt,
+          },
+        ],
+      },
     });
 
     let imageUrl: string | null = null;
@@ -90,7 +105,7 @@ export const editImageContent = async (base64Image: string, mimeType: string, pr
         }
       }
     }
-    
+
     return { imageUrl, text };
   } catch (error) {
     console.error("Error editing image:", error);
