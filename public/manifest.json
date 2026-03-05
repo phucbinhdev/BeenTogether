@@ -1,0 +1,31 @@
+{
+    "short_name": "CoupleConnect",
+    "name": "Couple Connect: Game & Tools",
+    "description": "A card game for couples to deepen connections, featuring AI-powered tools.",
+    "icons": [
+        {
+            "src": "/icons/icon-192x192.png",
+            "type": "image/png",
+            "sizes": "192x192",
+            "purpose": "any maskable"
+        },
+        {
+            "src": "/icons/icon-512x512.png",
+            "type": "image/png",
+            "sizes": "512x512",
+            "purpose": "any maskable"
+        }
+    ],
+    "start_url": "/",
+    "scope": "/",
+    "display": "standalone",
+    "theme_color": "#F43F5E",
+    "background_color": "#F8FAFC",
+    "orientation": "portrait",
+    "categories": [
+        "lifestyle",
+        "entertainment"
+    ],
+    "lang": "vi",
+    "dir": "ltr"
+}

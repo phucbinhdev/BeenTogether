@@ -12,6 +12,8 @@ export const viewport: Viewport = {
 
 export const metadata: Metadata = {
   title: "Couple Connect",
+  description:
+    "A card game for couples to deepen connections, featuring AI-powered tools.",
   manifest: "/manifest.json",
   appleWebApp: {
     capable: true,
@@ -19,7 +21,11 @@ export const metadata: Metadata = {
     title: "CoupleConnect",
   },
   icons: {
-    apple: "https://cdn-icons-png.flaticon.com/512/833/833472.png",
+    icon: [
+      { url: "/icons/icon-192x192.png", sizes: "192x192", type: "image/png" },
+      { url: "/icons/icon-512x512.png", sizes: "512x512", type: "image/png" },
+    ],
+    apple: "/icons/apple-touch-icon.png",
   },
 };
 
